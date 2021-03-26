@@ -30,4 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('duoc-lieu-hoc/', include('duoclieu.urls')),
     path('', RedirectView.as_view(url='home/', permanent=False)),
-]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

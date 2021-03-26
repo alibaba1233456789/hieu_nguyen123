@@ -39,8 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'duoclieu.apps.DuoclieuConfig',
 ]
+
+CLOUDINARY_STORAGE = {
+             'CLOUD_NAME': 'your_cloud_name',
+             'API_KEY': 'your_api_key',
+             'API_SECRET': 'your_api_secret'
+            }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,6 +141,9 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static') ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
