@@ -1,0 +1,1 @@
+web: gunicorn thucvat.wsgi --log-file -
