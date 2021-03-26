@@ -9,7 +9,7 @@ class Level0(models.Model):
     tieu_de_chinh = models.CharField(max_length = 200, verbose_name = 'tiêu đề chính')
     noi_dung = models.TextField(max_length = 2000, verbose_name = 'mục tiêu', null=True, blank = True)
     nguoi_dang = models.CharField(max_length = 200, null = True, blank = True, verbose_name ='người đăng', help_text = 'Tên tác giả, nếu không nhập thông tin chương trình sẽ mặc định là họ và tên của chủ tài khoản (thông tin khai báo lúc đăng ký tài khoản / tạo bởi admin).')
-    slug = models.SlugField(null=True, unique=True, allow_unicode =True, help_text = 'Thông tin này sẽ hiển thị tại địa chỉ web, ví dụ: www.home/duoclieu/XXXXX, với XXXX là thông tin bạn nhập vào')
+    slug = models.SlugField(null=True, unique=True, help_text = 'Thông tin này sẽ hiển thị tại địa chỉ web, ví dụ: www.home/duoclieu/XXXXX, với XXXX là thông tin bạn nhập vào')
 
     def __str__(self):
         return f'{self.tieu_de_chinh}'
@@ -31,7 +31,7 @@ class Level1(models.Model):
     tieu_de_1 = models.CharField(max_length = 200, verbose_name = 'tiêu đề cấp 1', null=True, blank = True)
     noi_dung = models.TextField(max_length = 2000, verbose_name = 'nội dung', null=True, blank = True)
     level_0 = models.ForeignKey('Level0', on_delete = models.CASCADE, verbose_name = '<-- Level0')
-    
+
     def __str__(self):
         return f'{self.tieu_de_1}:'
 
