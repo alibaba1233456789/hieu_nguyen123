@@ -40,11 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'duoclieu.apps.DuoclieuConfig',
-    'duoc_lam_sang.apps.DuocLamSangConfig',
-    'doc_chat_hoc.apps.DocChatHocConfig',
-    'duoc_ly.apps.DuocLyConfig',
-    'hoa_duoc.apps.HoaDuocConfig',
-    'kiem_nghiem.apps.KiemNghiemConfig',
 ]
 
 MIDDLEWARE = [
