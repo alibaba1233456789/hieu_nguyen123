@@ -1,0 +1,27 @@
+{% extends "duoc_lieu_hoc.html" %}
+{% block content %}
+  <input class="w3-right" id="myInput" type="text" placeholder="Search.."> <br>
+  <h3 class="w3-center" style="font-family:'Papyrus'">Danh sách dược liệu</h3>
+  {% if duoclieu_list %}
+  <table class="center1" width="95%">
+    <tr>
+      <th class="tb1 w3-padding w3-light-grey w3-center">Tên tiếng việt</th>
+      <th class="tb1 w3-padding w3-light-grey w3-center">Tên latinh</th>
+      <th class="tb1 w3-padding w3-light-grey w3-center">Họ thực vật</th>
+      <th class="tb1 w3-padding w3-light-grey w3-center">Tác dụng chính</th>
+    </tr>
+  <tbody id="myTable">
+  {% for duoclieu in duoclieu_list %}
+    <tr>
+      <td class="tb1 w3-center {% if duoclieu.dacdiemvaphanbo_set.count > 1 or duoclieu.hinhanhminhhoa_set.count > 1 %} w3-text-blue{% else %} w3-text-red {% endif %} w3-padding"><u><a href="{{duoclieu.get_absolute_url}}">{{ duoclieu.ten_tieng_viet }}</a></u></td>
+      <td class="tb1 w3-padding"><a href="{{duoclieu.get_absolute_url}}"><i>{{ duoclieu.ten_la_tinh }}</i></a></td>
+      <td class="tb1 w3-padding"><a href="{{duoclieu.ho_thuc_vat.get_absolute_url}}">{{ duoclieu.ho_thuc_vat }}</a></td>
+      <td class="tb1 w3-padding">{{ duoclieu.tac_dung_chinh }}</td>
+    </tr>
+  {% endfor %}
+  <tbody>
+  </table>
+  {% else %}
+  <p>Chưa cập nhật.</p>
+  {% endif %}
+{% endblock %}

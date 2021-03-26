@@ -1,0 +1,171 @@
+{% extends "duoc_lieu_hoc.html" %}
+
+{% block content %}
+  <div class="w3-right-align"><small><u>Lần cập nhật gần nhất</u>: {{duoclieu.ngay_dang|date:'d/m/Y (H:i)'}}</small></div>
+  <h3 class="w3-center" style="font-family:'Lucida Handwriting'">{{duoclieu.ten_tieng_viet}} <i >(<span class="w3-text-blue">{{duoclieu.ten_la_tinh}}</span>)</i></h3>
+  {% if duoclieu.dacdiemvaphanbo_set.count == 0 and duoclieu.bophandung_set.count == 0 and duoclieu.dacdiemviphauvabot_set.count == 0 and duoclieu.tacdungvacongdung_set.count == 0 and duoclieu.thanhphanhoahoc_set.count == 0 and duoclieu.chebien_set.count == 0 and duoclieu.chepham_set.count == 0 and duoclieu.chuy_set.count == 0 and duoclieu.hinhanhminhhoa_set.count == 0 %}
+     <p class="w3-center w3-text-red">Chưa cập nhật.</p>
+  {% endif %}
+  <div style="margin-left:20px;margin-top:20px">
+    <ol>
+    {% if duoclieu.tenkhoahoc_set.count > 0 %}
+      <li><u>Tên khoa học</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.tenkhoahoc_set.all %}
+          <li><i>{{chitiet.ten_latinh_spp}}</i> ({{chitiet.ten_tieng_viet_spp}})</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.dacdiemvaphanbo_set.count > 0 %}
+      <li><u>Đặc điểm và phân bố</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.dacdiemvaphanbo_set.all %}
+          <li>{{chitiet.dac_diem_va_phan_bo|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.bophandung_set.count > 0 %}
+      <li><u>Bộ phận dùng</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.bophandung_set.all %}
+          <li>{{chitiet.bo_phan_dung|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.dacdiemviphauvabot_set.count > 0 %}
+      <li><u>Đặc điểm vi phẫu và bột</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.dacdiemviphauvabot_set.all %}
+          <li>{{chitiet.dac_diem_vi_phau_va_bot|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.tacdungvacongdung_set.count > 0 %}
+      <li><u>Tác dụng và công dụng</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.tacdungvacongdung_set.all %}
+          <li>{{chitiet.tac_dung_va_cong_dung|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.thanhphanhoahoc_set.count > 0 %}
+      <li><u>Thành phần hoá học</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.thanhphanhoahoc_set.all %}
+          <li>{{chitiet.thanh_phan_hoa_hoc|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.chebien_set.count > 0 %}
+      <li><u>Chế biến</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.chebien_set.all %}
+          <li>{{chitiet.che_bien|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.chepham_set.count > 0 %}
+      <li><u>Chế phẩm</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.chepham_set.all %}
+          <li>{{chitiet.che_pham|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.chuy_set.count > 0 %}
+      <li><u>Chú ý</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.chuy_set.all %}
+          <li>{{chitiet.chu_y|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.ghichu_set.count > 0 %}
+      <li><u>Ghi chú</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.ghichu_set.all %}
+          <li>{{chitiet.ghi_chu|safe}}</li><br>
+            {% if duoclieu.hinhanhbosung_set.count > 0 %}
+            <table>
+              <tr>
+                <td width=30%><img src="{{duoclieu.hinhanhbosung_set.all.0.hinh_anh_bo_sung.url}}" width="100%"></td>
+                <td width=30%><img src="{{duoclieu.hinhanhbosung_set.all.1.hinh_anh_bo_sung.url}}" width="100%"></td>
+                <td width=30%><img src="{{duoclieu.hinhanhbosung_set.all.2.hinh_anh_bo_sung.url}}" width="100%"></td>
+              </tr>
+            </table><br>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+      {% if duoclieu.hinhanhminhhoa_set.count > 0 %}
+      <li><u>Hình ảnh minh hoạ</u>:<br><br>
+        <table class="center1">
+          <tr>
+            <td class="tb1" width=50%><img src="{{duoclieu.hinhanhminhhoa_set.all.0.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% if duoclieu.hinhanhminhhoa_set.count > 1 %}
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.1.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% endif %}
+          </tr>
+          {% if duoclieu.hinhanhminhhoa_set.count > 2 %}
+          <tr>
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.2.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% if duoclieu.hinhanhminhhoa_set.count > 3 %}
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.3.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% endif %}
+          </tr>
+          {% endif %}
+
+          {% if duoclieu.hinhanhminhhoa_set.count > 4 %}
+          <tr>
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.4.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% if duoclieu.hinhanhminhhoa_set.count > 5 %}
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.5.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% endif %}
+          </tr>
+          {% endif %}
+
+          {% if duoclieu.hinhanhminhhoa_set.count > 6 %}
+          <tr>
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.6.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% if duoclieu.hinhanhminhhoa_set.count > 7 %}
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.7.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% endif %}
+          </tr>
+          {% endif %}
+          {% if duoclieu.hinhanhminhhoa_set.count > 8 %}
+          <tr>
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.8.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% if duoclieu.hinhanhminhhoa_set.count > 9 %}
+            <td class="tb1"><img src="{{duoclieu.hinhanhminhhoa_set.all.9.hinh_anh_minh_hoa.url}}" width="400px"></td>
+            {% endif %}
+          </tr>
+          {% endif %}
+        </table>
+      </li>
+      {% endif %}
+    </ol>
+  </div>
+  {% if duoclieu.nguoi_dang is not none %}
+  <div class="w3-right-align"><small><u>Người đăng</u>: {{duoclieu.nguoi_dang}}</small></div>
+  {% endif %}
+{% endblock %}

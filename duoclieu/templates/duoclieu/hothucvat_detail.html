@@ -1,0 +1,17 @@
+{% extends "duoc_lieu_hoc.html" %}
+
+{% block content %}
+  <h3 class="w3-center">Danh sách thực vật trong họ <strong class="w3-text-blue">{{hothucvat.La_tinh}}</strong></h3>
+  <div style="margin-left:20px;margin-top:20px">
+    <ol>
+    {% if hothucvat.duoclieu_set.all.count < 1 %}
+    <p class="w3-center w3-text-red">Chưa cập nhật.</p>
+    {% else %}
+      {% for duoclieu in hothucvat.duoclieu_set.all %}
+          <li><a href="{{duoclieu.get_absolute_url}}"><span class="{% if duoclieu.dacdiemvaphanbo_set.count > 1 or duoclieu.hinhanhminhhoa_set.count > 1 %} w3-text-blue{% else %} w3-text-red {% endif %}">{{duoclieu.ten_tieng_viet}}</span> (<i>{{duoclieu.ten_la_tinh}}</i>)</a></li>
+          <hr>
+      {% endfor %}
+    {% endif %}
+    </ol>
+  </div>
+{% endblock %}

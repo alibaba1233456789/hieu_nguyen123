@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 class="w3-center">Đăng ký người dùng</h2>
+  <small><i class="w3-center">(Tài khoản được dùng để xem một số nội dung giới hạn, nếu muốn tham gia xây dựng nội dung cần liên hệ trực tiếp với admin để được phân quyền và hướng dẫn nhập nội dung.)</i></small><hr>
+  <form method="post">
+    {% csrf_token %}
+    <p>{{form.username.label_tag}} {{form.username}}</p>
+    {% for error in form.username.errors %} <p><small class="w3-text-red">{{error}}</small></p> {% endfor %}
+    <table class="w3-boder-sand">
+      <tr>
+        <td><p>{{form.last_name.label_tag}} {{form.last_name}}</p>{% for error in form.last_name.errors %} <p><small class="w3-text-red">{{error}}</small></p> {% endfor %}</td>
+        <td class="w3-padding"><p>{{form.first_name.label_tag}} {{form.first_name}}</p>{% for error in form.first_name.errors %} <p><small class="w3-text-red">{{error}}</small></p> {% endfor %}</td>
+      </tr>
+    </table>
+    <p>{{form.email.label_tag}} {{form.email}}</p>
+    {% for error in form.email.errors %} <p><small class="w3-text-red">{{error}}</small></p> {% endfor %}
+    <table>
+      <tr>
+        <td><p>Mật khẩu: {{form.password1}}</p></td>
+        <td class="w3-padding"><p>Xác nhận mật khẩu: {{form.password2}}</p></td>
+      </tr>
+      <tr>
+        <td colspan="2">{% for error in form.password2.errors %} <p><small class="w3-text-red">{{error}}</small></p> {% endfor %}</td>
+      </tr>
+    </table>
+    <button type="submit">Gửi đi</button>
+    <small><i>(PS: Tài khoản sẽ được tạo sau khi ấn "Gửi đi" nếu bạn nhập thông tin chính xác theo yêu cầu).</i></small>
+    <br><br>
+  </form>
+{% endblock %}
