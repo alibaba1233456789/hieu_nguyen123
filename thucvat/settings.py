@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'cloudinary',
     'duoclieu.apps.DuoclieuConfig',
     'doc_chat_hoc.apps.DocChatHocConfig',
+    'duoc_lam_sang.apps.DuocLamSangConfig',
+    'duoc_ly.apps.DuocLyConfig',
+    'hoa_duoc.apps.HoaDuocConfig',
+    'kiem_nghiem.apps.KiemNghiemConfig',
 ]
 
 CLOUDINARY_STORAGE = {

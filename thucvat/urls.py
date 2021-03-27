@@ -30,6 +30,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('duoc-lieu-hoc/', include('duoclieu.urls')),
     path('doc-chat-hoc/', include('doc_chat_hoc.urls')),
+    path('duoc-lam-sang/', include('duoc_lam_sang.urls')),
+    path('duoc-ly/', include('duoc_ly.urls')),
+    path('hoa-duoc/', include('hoa_duoc.urls')),
+    path('kiem-nghiem/', include('kiem_nghiem.urls')),
     path('', RedirectView.as_view(url='home/', permanent=False)),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -1,0 +1,499 @@
+{% extends "duoc_lam_sang.html" %}
+
+{% block content %}
+<h2 class="w3-center" style="font-family:'Courier New'">{{level0.tieu_de_chinh}}</h2>
+<div class="w3-padding">
+  {% if level0.level1_set.count > 0 %}
+  <ol type="I">
+    {% for lv1 in level0.level1_set.all %}
+      {% if lv1.tieu_de_1 is not None %}
+      <li><u><strong>{{lv1.tieu_de_1}}</strong></u>:</li><br>
+      {% endif %}
+      {% if lv1.noi_dung is not None %}
+      <p>{{lv1.noi_dung|safe}}</p>
+      {% endif %}
+<!-- CHÈN HÌNH ẢNH VÀO TIÊU ĐỀ / NỘI DUNG CẤP 1 -->
+      {% if lv1.tieu_de_1 is not None or lv1.noi_dung is not None%}
+        {% if lv1.hinhanhlv1_set.count > 0%}
+        <table class="center1" width="100%">
+          <tr>
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.0.hinh.url}}" width="{% if lv1.hinhanhlv1_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.0.ten_hinh}}</i></p>
+            </td>
+            {% if lv1.hinhanhlv1_set.count > 1 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.1.hinh.url}}" width="{% if lv1.hinhanhlv1_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.1.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+            {% if lv1.hinhanhlv1_set.count > 2 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.2.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.2.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+          </tr>
+          {% if lv1.hinhanhlv1_set.count > 3 %}
+          <tr>
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.3.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.3.ten_hinh}}</i></p>
+            </td>
+            {% if lv1.hinhanhlv1_set.count > 4 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.4.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.4.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+            {% if lv1.hinhanhlv1_set.count > 5 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.5.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.5.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+          </tr>
+          {% endif %}
+          {% if lv1.hinhanhlv1_set.count > 6 %}
+          <tr>
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.6.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.6.ten_hinh}}</i></p>
+            </td>
+            {% if lv1.hinhanhlv1_set.count > 7 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.7.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.7.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+            {% if lv1.hinhanhlv1_set.count > 8 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.8.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.8.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+          </tr>
+          {% endif %}
+          {% if lv1.hinhanhlv1_set.count > 9 %}
+          <tr>
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.9.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.9.ten_hinh}}</i></p>
+            </td>
+            {% if lv1.hinhanhlv1_set.count > 10 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.10.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.10.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+            {% if lv1.hinhanhlv1_set.count > 11 %}
+            <td>
+              <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.11.hinh.url}}" width="75%"></p>
+              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.11.ten_hinh}}</i></p>
+            </td>
+            {% endif %}
+          </tr>
+          {% endif %}
+        </table>
+        {% endif %}
+      {% endif %}
+<!-- END HÌNH ẢNH CẤP 1-->
+      {% if lv1.level2_set.count > 0 %}
+      <ol type="1">
+        {% for lv2 in lv1.level2_set.all %}
+          {% if lv2.tieu_de_2 is not None %}
+          <li><u><i>{{lv2.tieu_de_2}}</i></u>:</li><br>
+          {% endif %}
+          {% if lv2.noi_dung is not None %}
+          <p>{{lv2.noi_dung|safe}}</p>
+          {% endif %}
+<!-- CHÈN HÌNH ẢNH VÀO TIÊU ĐỀ / NỘI DUNG CẤP 2 -->
+          {% if lv2.tieu_de_2 is not None or lv2.noi_dung is not None%}
+            {% if lv2.hinhanhlv2_set.count > 0%}
+            <table class="center1" width="100%">
+              <tr>
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.0.hinh.url}}" width="{% if lv2.hinhanhlv2_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.0.ten_hinh}}</i></p>
+                </td>
+                {% if lv2.hinhanhlv2_set.count > 1 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.1.hinh.url}}" width="{% if lv2.hinhanhlv2_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.1.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+                {% if lv2.hinhanhlv2_set.count > 2 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.2.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.2.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+              </tr>
+              {% if lv2.hinhanhlv2_set.count > 3 %}
+              <tr>
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.3.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.3.ten_hinh}}</i></p>
+                </td>
+                {% if lv2.hinhanhlv2_set.count > 4 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.4.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.4.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+                {% if lv2.hinhanhlv2_set.count > 5 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.5.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.5.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+              </tr>
+              {% endif %}
+              {% if lv2.hinhanhlv2_set.count > 6 %}
+              <tr>
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.6.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.6.ten_hinh}}</i></p>
+                </td>
+                {% if lv2.hinhanhlv2_set.count > 7 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.7.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.7.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+                {% if lv2.hinhanhlv2_set.count > 8 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.8.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.8.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+              </tr>
+              {% endif %}
+              {% if lv2.hinhanhlv2_set.count > 9 %}
+              <tr>
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.9.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.9.ten_hinh}}</i></p>
+                </td>
+                {% if lv2.hinhanhlv2_set.count > 10 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.10.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.10.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+                {% if lv2.hinhanhlv2_set.count > 11 %}
+                <td>
+                  <p class="w3-center"><img src="{{lv2.hinhanhlv2_set.all.11.hinh.url}}" width="75%"></p>
+                  <p class="w3-center"><i>{{lv2.hinhanhlv2_set.all.11.ten_hinh}}</i></p>
+                </td>
+                {% endif %}
+              </tr>
+              {% endif %}
+            </table>
+            {% endif %}
+          {% endif %}
+<!-- END HÌNH ẢNH CẤP 2-->
+          {% if lv2.level3_set.count > 0 %}
+          <ol type="a">
+            {% for lv3 in lv2.level3_set.all %}
+              {% if lv3.tieu_de_3 is not None %}
+              <li><u>{{lv3.tieu_de_3}}</u>:</li><br>
+              {% endif %}
+              {% if lv3.noi_dung is not None %}
+              <p>{{lv3.noi_dung|safe}}</p>
+              {% endif %}
+<!-- CHÈN HÌNH ẢNH VÀO TIÊU ĐỀ / NỘI DUNG CẤP 3 -->
+              {% if lv3.tieu_de_3 is not None or lv3.noi_dung is not None%}
+                {% if lv3.hinhanhlv3_set.count > 0%}
+                <table class="center1" width="100%">
+                  <tr>
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.0.hinh.url}}" width="{% if lv3.hinhanhlv3_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.0.ten_hinh}}</i></p>
+                    </td>
+                    {% if lv3.hinhanhlv3_set.count > 1 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.1.hinh.url}}" width="{% if lv3.hinhanhlv3_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.1.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                    {% if lv3.hinhanhlv3_set.count > 2 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.2.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.2.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                  </tr>
+                  {% if lv3.hinhanhlv3_set.count > 3 %}
+                  <tr>
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.3.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.3.ten_hinh}}</i></p>
+                    </td>
+                    {% if lv3.hinhanhlv3_set.count > 4 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.4.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.4.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                    {% if lv3.hinhanhlv3_set.count > 5 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.5.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.5.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                  </tr>
+                  {% endif %}
+                  {% if lv3.hinhanhlv3_set.count > 6 %}
+                  <tr>
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.6.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.6.ten_hinh}}</i></p>
+                    </td>
+                    {% if lv3.hinhanhlv3_set.count > 7 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.7.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.7.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                    {% if lv3.hinhanhlv3_set.count > 8 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.8.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.8.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                  </tr>
+                  {% endif %}
+                  {% if lv3.hinhanhlv3_set.count > 9 %}
+                  <tr>
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.9.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.9.ten_hinh}}</i></p>
+                    </td>
+                    {% if lv3.hinhanhlv3_set.count > 10 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.10.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.10.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                    {% if lv3.hinhanhlv3_set.count > 11 %}
+                    <td>
+                      <p class="w3-center"><img src="{{lv3.hinhanhlv3_set.all.11.hinh.url}}" width="75%"></p>
+                      <p class="w3-center"><i>{{lv3.hinhanhlv3_set.all.11.ten_hinh}}</i></p>
+                    </td>
+                    {% endif %}
+                  </tr>
+                  {% endif %}
+                </table>
+                {% endif %}
+              {% endif %}
+<!-- END HÌNH ẢNH CẤP 3-->
+              {% if lv3.level4_set.count > 0 %}
+              <ol type="i">
+                {% for lv4 in lv3.level4_set.all %}
+                  {% if lv4.tieu_de_4 is not None %}
+                  <li><u>{{lv4.tieu_de_4}}</u>:</li><br>
+                  {% endif %}
+                  {% if lv4.noi_dung is not None %}
+                  <p>{{lv4.noi_dung|safe}}</p>
+                  {% endif %}
+<!-- CHÈN HÌNH ẢNH VÀO TIÊU ĐỀ / NỘI DUNG CẤP 4 -->
+                  {% if lv4.tieu_de_4 is not None or lv4.noi_dung is not None%}
+                    {% if lv4.hinhanhlv4_set.count > 0%}
+                    <table class="center1" width="100%">
+                      <tr>
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.0.hinh.url}}" width="{% if lv4.hinhanhlv4_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.0.ten_hinh}}</i></p>
+                        </td>
+                        {% if lv4.hinhanhlv4_set.count > 1 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.1.hinh.url}}" width="{% if lv4.hinhanhlv4_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.1.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                        {% if lv4.hinhanhlv4_set.count > 2 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.2.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.2.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                      </tr>
+                      {% if lv4.hinhanhlv4_set.count > 3 %}
+                      <tr>
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.3.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.3.ten_hinh}}</i></p>
+                        </td>
+                        {% if lv4.hinhanhlv4_set.count > 4 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.4.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.4.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                        {% if lv4.hinhanhlv4_set.count > 5 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.5.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.5.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                      </tr>
+                      {% endif %}
+                      {% if lv4.hinhanhlv4_set.count > 6 %}
+                      <tr>
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.6.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.6.ten_hinh}}</i></p>
+                        </td>
+                        {% if lv4.hinhanhlv4_set.count > 7 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.7.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.7.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                        {% if lv4.hinhanhlv4_set.count > 8 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.8.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.8.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                      </tr>
+                      {% endif %}
+                      {% if lv4.hinhanhlv4_set.count > 9 %}
+                      <tr>
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.9.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.9.ten_hinh}}</i></p>
+                        </td>
+                        {% if lv4.hinhanhlv4_set.count > 10 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.10.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.10.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                        {% if lv4.hinhanhlv4_set.count > 11 %}
+                        <td>
+                          <p class="w3-center"><img src="{{lv4.hinhanhlv4_set.all.11.hinh.url}}" width="75%"></p>
+                          <p class="w3-center"><i>{{lv4.hinhanhlv4_set.all.11.ten_hinh}}</i></p>
+                        </td>
+                        {% endif %}
+                      </tr>
+                      {% endif %}
+                    </table>
+                    {% endif %}
+                  {% endif %}
+<!-- END HÌNH ẢNH CẤP 4-->
+                  {% if lv4.level5_set.count > 0 %}
+                  <ul>
+                    {% for lv5 in lv4.level5_set.all %}
+                      {% if lv5.tieu_de_5 is not None %}
+                      <li><u>{{lv5.tieu_de_5}}</u>:</li><br>
+                      {% endif %}
+                      {% if lv5.noi_dung is not None %}
+                      <p>{{lv5.noi_dung|safe}}</p>
+                      {% endif %}
+<!-- CHÈN HÌNH ẢNH VÀO TIÊU ĐỀ / NỘI DUNG CẤP 5 -->
+                      {% if lv5.tieu_de_5 is not None or lv5.noi_dung is not None%}
+                        {% if lv5.hinhanhlv5_set.count > 0%}
+                        <table class="center1" width="100%">
+                          <tr>
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.0.hinh.url}}" width="{% if lv5.hinhanhlv5_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.0.ten_hinh}}</i></p>
+                            </td>
+                            {% if lv5.hinhanhlv5_set.count > 1 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.1.hinh.url}}" width="{% if lv5.hinhanhlv5_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.1.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                            {% if lv5.hinhanhlv5_set.count > 2 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.2.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.2.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                          </tr>
+                          {% if lv5.hinhanhlv5_set.count > 3 %}
+                          <tr>
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.3.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.3.ten_hinh}}</i></p>
+                            </td>
+                            {% if lv5.hinhanhlv5_set.count > 4 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.4.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.4.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                            {% if lv5.hinhanhlv5_set.count > 5 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.5.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.5.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                          </tr>
+                          {% endif %}
+                          {% if lv5.hinhanhlv5_set.count > 6 %}
+                          <tr>
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.6.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.6.ten_hinh}}</i></p>
+                            </td>
+                            {% if lv5.hinhanhlv5_set.count > 7 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.7.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.7.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                            {% if lv5.hinhanhlv5_set.count > 8 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.8.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.8.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                          </tr>
+                          {% endif %}
+                          {% if lv5.hinhanhlv5_set.count > 9 %}
+                          <tr>
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.9.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.9.ten_hinh}}</i></p>
+                            </td>
+                            {% if lv5.hinhanhlv5_set.count > 10 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.10.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.10.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                            {% if lv5.hinhanhlv5_set.count > 11 %}
+                            <td>
+                              <p class="w3-center"><img src="{{lv5.hinhanhlv5_set.all.11.hinh.url}}" width="75%"></p>
+                              <p class="w3-center"><i>{{lv5.hinhanhlv5_set.all.11.ten_hinh}}</i></p>
+                            </td>
+                            {% endif %}
+                          </tr>
+                          {% endif %}
+                        </table>
+                        {% endif %}
+                      {% endif %}
+<!-- END HÌNH ẢNH CẤP 5-->
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+              {% endif %}
+            {% endfor %}
+          </ol>
+          {% endif %}
+        {% endfor %}
+      </ol>
+      {% endif %}
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="w3-center w3-text-red">Chưa cập nhật.</p>
+  {% endif %}
+</div>
+{% endblock %}
