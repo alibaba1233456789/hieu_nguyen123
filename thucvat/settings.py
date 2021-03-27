@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'duoclieu.apps.DuoclieuConfig',
+    'doc_chat_hoc.apps.DocChatHocConfig',
 ]
 
 CLOUDINARY_STORAGE = {

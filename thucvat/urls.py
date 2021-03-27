@@ -29,6 +29,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('duoc-lieu-hoc/', include('duoclieu.urls')),
+    path('doc-chat-hoc/', include('doc_chat_hoc.urls')),
     path('', RedirectView.as_view(url='home/', permanent=False)),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
