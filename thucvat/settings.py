@@ -47,6 +47,11 @@ INSTALLED_APPS = [
     'duoc_ly.apps.DuocLyConfig',
     'hoa_duoc.apps.HoaDuocConfig',
     'kiem_nghiem.apps.KiemNghiemConfig',
+    'cong_nghiep_duoc.apps.CongNghiepDuocConfig',
+    'phap_che_duoc.apps.PhapCheDuocConfig',
+    'hoa_ly.apps.HoaLyConfig',
+    'sinh_hoa.apps.SinhHoaConfig',
+    'cong_nghe_sinh_hoc.apps.CongNgheSinhHocConfig',
 ]
 
 CLOUDINARY_STORAGE = {

@@ -34,6 +34,11 @@ urlpatterns = [
     path('duoc-ly/', include('duoc_ly.urls')),
     path('hoa-duoc/', include('hoa_duoc.urls')),
     path('kiem-nghiem/', include('kiem_nghiem.urls')),
+    path('cong-nghiep-duoc/', include('cong_nghiep_duoc.urls')),
+    path('phap-che-duoc/', include('phap_che_duoc.urls')),
+    path('hoa-ly/', include('hoa_ly.urls')),
+    path('sinh-hoa/', include('sinh_hoa.urls')),
+    path('cong-nghe-sinh-hoc/', include('cong_nghe_sinh_hoc.urls')),
     path('', RedirectView.as_view(url='home/', permanent=False)),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
