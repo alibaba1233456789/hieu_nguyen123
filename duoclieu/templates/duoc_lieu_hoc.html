@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block title %}<title>Dược liệu học</title>{% endblock %}
-{% block sidebar %}<br>
-  <a class="w3-bar-item fa fa-home w3-large w3-hover-yellow w3-center" href="{% url 'home' %}"></a><hr>
+{% block sidebar %}
+  <a class="w3-bar-item fa fa-home w3-large w3-hover-yellow w3-center" href="{% url 'home' %}"></a>
   <a class="w3-bar-item" href="{% url 'level0' %}"><strong>GIÁO TRÌNH</strong><br>Dược liệu</a><hr>
   <a class="w3-bar-item" href="{% url 'ho-thuc-vat' %}">Họ thực vật</a>
   <a class="w3-bar-item" href="{% url 'duoclieu' %}">Dược liệu</a>
