@@ -36,7 +36,6 @@ class DuocLieu(models.Model):
     ten_tieng_viet = models.CharField(max_length = 200, verbose_name ='Tên tiếng việt')
     ten_la_tinh = models.CharField(max_length = 200, verbose_name ='Tên Latinh')
     ho_thuc_vat = models.ForeignKey('HoThucVat', on_delete = models.CASCADE, verbose_name ='Họ thực vật',  help_text ='Kéo chọn họ thực vật phù hợp, nếu họ thực vật chưa có ấn vào dấu + để tạo mới.')
-    tac_dung_chinh = models.TextField(max_length = 1000, null=True, blank=True, verbose_name = 'Công dụng chính')
     ngay_dang = models.DateTimeField(auto_now=True, null=True, blank = True, verbose_name ='Ngày cập nhật')
     nguoi_dang = models.CharField(max_length = 200, null = True, blank = True, verbose_name ='người đăng', help_text = 'Tên tác giả, nếu không nhập thông tin chương trình sẽ mặc định là họ và tên của chủ tài khoản (thông tin khai báo lúc đăng ký tài khoản / tạo bởi admin).')
     slug = models.SlugField(null=True, blank=True, unique=True, help_text = 'Thông tin này sẽ hiển thị tại địa chỉ web, ví dụ: www.home/duoclieu/XXXXX, nếu không nhập dữ liệu chương trình sẽ mặc định XXXXX là tên khoa học của dược liệu.')
