@@ -73,7 +73,7 @@
         <a class="w3-bar-item fa fa-user-circle-o w3-large w3-right" href="{% url 'login'%}?next={% url 'home' %}"><span> Đăng nhập</span></a>
       {% endif %}
       <!--a class="w3-bar-item fa fa-home w3-large w3-hover-yellow w3-right" href="{% url 'home' %}"></a-->
-      <div class="w3-bar-item w3-text-aqua w3-hide-medium w3-hide-small w3-left"  style="font-family:'Copperplate'">Website kiến thức dược học số 1 Việt Nam</div>
+      <a class="w3-bar-item w3-text-aqua w3-hide-medium w3-hide-small w3-left"  style="font-family:'Copperplate'" href="{% url 'home' %}">Website kiến thức dược học số 1 Việt Nam</a>
     </div>
     <div class="w3-container" id="close-tab">
       {% block content %}<p>1234567890</p>{% endblock %}
