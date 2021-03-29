@@ -12,7 +12,7 @@
     <tbody id="myTable">
     {% for hothucvat in hothucvat_list %}
       <tr>
-        <td class="tb1 w3-center {% if hothucvat.duoclieu_set.count < 1%} w3-text-red {% else %} w3-text-blue {% endif %} w3-padding"><u><a href="{{hothucvat.get_absolute_url}}">{{ hothucvat.Tieng_viet|upper }}</a></u></td>
+        <td class="tb1 w3-center {% if hothucvat.duoclieu_set.count < 1%} w3-text-red {% else %} w3-text-blue {% endif %} w3-padding"><a href="{{hothucvat.get_absolute_url}}">{{ hothucvat.Tieng_viet|upper }}</a></td>
         <td class="tb1 w3-padding"><a href="{{hothucvat.get_absolute_url}}">{{hothucvat.La_tinh}}</a></td>
         <td class="tb1 w3-padding">{{hothucvat.gioi_thieu_chung}}</td>
       </tr>
