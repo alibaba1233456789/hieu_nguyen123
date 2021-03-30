@@ -4,16 +4,40 @@
   ul.b {list-style-type: square;}
 {% endblock %}
 {% block content %}
-<h2 class="w3-center" style="font-family:Copperplate"><i>Tổng quan nội dung</i></h2>
-<div><strong>I. <u>Lời nói đầu</u></strong>:</div>
-<div class="w3-margin">
-  <p>Alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba </p>
-  <p>Alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba </p>
-  <p>Alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba alibaba </p>
-  <p>some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words some words </p>
+<h2 class="w3-center" style="font-family:"><i>LỜI NÓI ĐẦU</i></h2>
+<div><strong>I. <u>Sứ mệnh</u></strong>:</div>
+<div>
+  <ol><br>
+    <li>Vấn đề đầu tiên cho mọi vấn đề sức khoẻ không phải là thuốc hay khả năng kinh tế mà là sự hiểu biết. Nếu từng người có đủ kiến thức để tự chăm sóc sức khoẻ cho bản thân thì sẽ giảm đáng kể gánh nặng của xã hội và gánh nặng tài chính cho cá nhân/gia đình mỗi người.</li><br>
+    <li>Nhận thấy thông  về thuốc và sức khoẻ hiện tại trên internet cực kỳ hỗn loạn, thiếu thống nhất. Nên mục tiêu quan trọng nhất của nền tảng web này là cung cấp đến người Việt thông tin đúng nhất và cập nhật nhất về thuốc và các vấn đề sức khoẻ nói chung.</li><br>
+    <li>Kết nối với những người giỏi nhất để cho ra sản phẩm thông tin tốt nhất.</li><br>
+    <li>Liên kết với các công ty dược tốt nhất trên lãnh thổ Việt Nam, nhằm cung cấp cho bệnh nhân và người dùng thuốc tốt nhất với giá cả hợp lý nhất.</li>
+  </ol>
 </div>
-<div><strong>II. <u>Bảng số liệu thống kê tự động cập nhật</u></strong>:</div><br>
-  <table style="font-family:Copperplate" class="tb1 center1" width = "95%">
+<div><strong>II. <u>Cách thức xây dựng thông tin</u></strong>:</div>
+  <ol><br>
+    <li>Xây dựng mô hình web cho từng phần nội dung theo Django framework.</li><br>
+    <li>Tìm kiếm những người có chuyên môn phù hợp nhất để quản lý và cập nhật thông tin.</li><br>
+    <li>Đăng nhập admin site, cập nhật và hoàn thiện nội dung theo thời gian.</li><br>
+    <table class="tb1 center1"  width = "70%">{% load static %}
+      <tr>
+        <td width = "50%"><img type="image/png" src="{% static 'images/huong_dan_01.png' %}" width = "100%"></td>
+        <td width = "50%"><img type="image/png" src="{% static 'images/huong_dan_02.png' %}" width = "100%"></td>
+      </tr>
+      <tr>
+        <td><img type="image/png" src="{% static 'images/huong_dan_03.png' %}" width = "100%"></td>
+        <td><img type="image/png" src="{% static 'images/huong_dan_04.png' %}" width = "100%"></td>
+      </tr>
+    </table>
+  </ol>
+<div><strong>II. <u>Cách thức tra cứu thông tin</u></strong>:</div>
+  <ol><br>
+    <li>Thông tin được xây dựng theo môn học trong chương trình đào tạo dược sĩ đại học với những kiến thức cơ bản nhất.</li><br>
+    <li>Bổ sung những thông tin có giá trị thực tiễn và ứng dụng cao trong đời sống nhằm cũng cấp đến những người bình thường (không phải dược sĩ) những kiếm thức hữu ích nhất để có thể tự chăm sóc bản thân.</li><br>
+    <li>Cập nhật những thông tin về thuốc và kiến thức y học mới nhất thế giới (giành cho dược sĩ).</li>
+  </ol>
+<div><strong>III. <u>Bảng số liệu thống kê tiến độ tự động cập nhật</u></strong>:</div><br>
+  <table style="font-family:Copperplate" class="tb1 center1" width = "70%">
     <tr>
       <td style="vertical-align: text-top" class="tb1" width = "50%">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Dược liệu học</u></strong></div>

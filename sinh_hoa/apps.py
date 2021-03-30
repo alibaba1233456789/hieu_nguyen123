@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class SinhHoaConfig(AppConfig):
     name = 'sinh_hoa'
-    verbose_name = "10. Sinh hoá"
+    verbose_name = "J. Sinh hoá"
