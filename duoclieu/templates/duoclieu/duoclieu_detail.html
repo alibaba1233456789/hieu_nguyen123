@@ -1,5 +1,10 @@
 {% extends "duoc_lieu_hoc.html" %}
+{% block style %}
 
+  ol { padding: 0px 0px 0px 0px; }
+  ul { padding: 0px 0px 0px 20px; }
+
+{% endblock %}
 {% block content %}
   <div class="w3-right-align">{% if duoclieu.tacdungvacongdung_set.count > 0 %}<small><u>Lần cập nhật gần nhất</u>: {{duoclieu.ngay_dang|date:'d/m/Y (H:i)'}}</small>{% else %}{% endif %}</div>
   <h3 class="w3-center" style="font-family:'Lucida Handwriting'">{{duoclieu.ten_tieng_viet}} <i >(<span class="w3-text-blue">{{duoclieu.ten_la_tinh}}</span>)</i></h3>
@@ -7,7 +12,7 @@
      <p class="w3-center w3-text-red">Chưa cập nhật.</p>
   {% endif %}
   <div style="margin-left:20px;margin-top:20px">
-    <ol>
+    <ol >
     {% if duoclieu.tenkhoahoc_set.count > 0 %}
       <li><u>Tên khoa học</u>:
         <ul><br>
