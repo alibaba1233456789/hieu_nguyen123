@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
   <div class="w3-right-align">{% if duoclieu.tacdungvacongdung_set.count > 0 %}<small><u>Lần cập nhật gần nhất</u>: {{duoclieu.ngay_dang|date:'d/m/Y (H:i)'}}</small>{% else %}{% endif %}</div>
-  <h3 class="w3-center" style="font-family:'Lucida Handwriting'">{{duoclieu.ten_tieng_viet}} <i >(<span class="w3-text-blue">{{duoclieu.ten_la_tinh}}</span>)</i></h3>
+  <h3 class="w3-center" style="font-family:'Lucida Handwriting'">{{duoclieu.ten_tieng_viet}} <br class="w3-hide-large"><i>(<span class="w3-text-blue">{{duoclieu.ten_la_tinh}}</span>)</i></h3>
   {% if duoclieu.dacdiemvaphanbo_set.count == 0 and duoclieu.bophandung_set.count == 0 and duoclieu.dacdiemviphauvabot_set.count == 0 and duoclieu.tacdungvacongdung_set.count == 0 and duoclieu.thanhphanhoahoc_set.count == 0 and duoclieu.chebien_set.count == 0 and duoclieu.chepham_set.count == 0 and duoclieu.chuy_set.count == 0 and duoclieu.hinhanhminhhoa_set.count == 0 %}
      <p class="w3-center w3-text-red">Chưa cập nhật.</p>
   {% endif %}
