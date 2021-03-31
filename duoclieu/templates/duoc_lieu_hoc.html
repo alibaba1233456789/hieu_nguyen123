@@ -16,8 +16,8 @@
 </div>
 <div><strong>II. <u>Tiến độ cập nhật</u></strong>:</div>
     <ul class="center1"><br>
-      <li>Họ thực vật:<span class="w3-text-red"> {{ So_ho_thuc_vat }}</span></li><br>
-      <li>Dược liệu:<span class="w3-text-red"> {{ So_duoc_lieu }}</span></li><br>
-      <li>Số chương lý thuyết:<span class="w3-text-red"> {{ So_chuong }}</span></li>
+      <li><a href="{% url 'ho-thuc-vat' %}">Họ thực vật<a>:<span class="w3-text-red"> {{ So_ho_thuc_vat }}</span></li><br>
+      <li><a href="{% url 'duoclieu' %}">Dược liệu</a>:<span class="w3-text-red"> {{ So_duoc_lieu }}</span></li><br>
+      <li><a href="{% url 'level0' %}">Giáo trình lý thuyết</a>:<span class="w3-text-red"> {{ So_chuong }}</span></li>
     </ul>
 {% endblock %}
