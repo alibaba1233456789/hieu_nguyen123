@@ -64,7 +64,8 @@
 
   <div class="w3-main" style="margin-left:200px">
     <div class="w3-bar w3-light-blue sticky">
-      <a class="w3-bar-item  fa fa-bars w3-large w3-hide-large" onclick="w3_open()"</a>
+      <a class="w3-bar-item  fa fa-bars w3-large w3-hide-large" onclick="w3_open()"</a><br>
+      <a class="w3-bar-item fa fa-home w3-large w3-hide-large" href="{% url 'home' %}"></a>
       {% if user.is_authenticated %}
         <a class="w3-bar-item fa w3-large w3-right" href="{% url 'logout'%}?next={% url 'home' %}"><strong class="w3-text-brown">Log out</strong></a>
         <div class="w3-bar-item fa fa-user-circle w3-large w3-right"><strong class="w3-text-white"> {{ user.get_username }}</strong></div>
