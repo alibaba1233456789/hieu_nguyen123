@@ -13,7 +13,7 @@
     <p class="w3-center w3-text-red">Chưa cập nhật.</p>
     {% else %}
       {% for duoclieu in hothucvat.duoclieu_set.all %}
-          <li><a href="{{duoclieu.get_absolute_url}}"><span class="{% if duoclieu.dacdiemvaphanbo_set.count > 1 or duoclieu.hinhanhminhhoa_set.count > 1 %} w3-text-blue{% else %} w3-text-red {% endif %}">{{duoclieu.ten_tieng_viet}}</span> (<i>{{duoclieu.ten_la_tinh}}</i>)</a></li>
+          <li><a href="{{duoclieu.get_absolute_url}}"><span class="{% if duoclieu.dacdiemvaphanbo_set.count > 1 or duoclieu.hinhanhminhhoa_set.count > 1 %} link {% else %} w3-text-red {% endif %}">{{duoclieu.ten_tieng_viet}}</span> (<i>{{duoclieu.ten_la_tinh}}</i>)</a></li>
           <hr>
       {% endfor %}
     {% endif %}
