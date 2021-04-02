@@ -33,113 +33,69 @@
     <li>Cập nhật những thông tin về thuốc và kiến thức y học mới nhất trên thế giới (giành cho dược sĩ).</li>
   </ol>
 <div><strong>IV. <u>Bảng số liệu thống kê tiến độ tự động cập nhật</u></strong>:</div><br>
-  <table style="font-family:Copperplate" class="tb1 center1" width = "90%">
+  <table class="tb1 center1" width = "90%">
     <tr>
       <td style="vertical-align: text-top" class="tb1" width = "50%">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Dược liệu học</u></strong></div>
         <ul class="a">
-          <li>Số họ thực vật:<span class="w3-text-red"> {{ So_ho_thuc_vat }}</span></li><br>
-          <li>Số dược liệu:<span class="w3-text-red"> {{ So_duoc_lieu }}</span></li><br>
-          <li>Giáo trình lý thuyết:<span class="w3-text-red"> {{ So_chuong }}</span> Chương</li>
+          <li><a class="link" href="{% url 'ho-thuc-vat' %}">Họ thực vật<a>:<span class="w3-text-red"> {{ So_ho_thuc_vat }}</span></li><br>
+          <li><a class="link" href="{% url 'duoclieu' %}">Dược liệu</a>:<span class="w3-text-red"> {{ So_duoc_lieu }}</span></li><br>
+          <li><a class="link" href="{% url 'level0' %}">Giáo trình lý thuyết</a>:<span class="w3-text-red"> {{ So_chuong }}</span></li>
         </ul>
       </td>
       <td style="vertical-align: text-top" class="tb1" width = "50%">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Hoá dược</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Dược lý</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Dược lâm sàng</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Hoá lý</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Kiểm nghiệm</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Độc chất học</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>Công nghiệp dược</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>XXXXXX</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>XXXXXX</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>XXXXXX</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
       <td style="vertical-align: text-top" class="tb1">
         <div class="w3-center w3-padding w3-text-blue"><strong><u>XXXXXX</u></strong></div>
-        <ul class="a">
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span></li><br>
-          <li>XXXXXXXXXXXX:<span class="w3-text-red"> X</span> Chương</li>
-        </ul>
+        <p class="w3-center w3-text-red"><small><i>Chưa cập nhật</i></small></p>
       </td>
     </tr>
   </table>
