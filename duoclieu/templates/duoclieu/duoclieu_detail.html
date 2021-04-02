@@ -17,7 +17,7 @@
       <li><u>Tên khoa học</u>:
         <ul><br>
           {% for chitiet in duoclieu.tenkhoahoc_set.all %}
-          <li><i>{{chitiet.ten_latinh_spp}}</i> {% if chitiet.ten_tieng_viet_spp is none %}{% else%}({{chitiet.ten_tieng_viet_spp}}){% endif %}</li><br>
+          <li><small><i>{{chitiet.ten_latinh_spp}}</i> {% if chitiet.ten_tieng_viet_spp is none %}{% else%}({{chitiet.ten_tieng_viet_spp}}){% endif %}</small></li>
           {% endfor %}
         </ul>
       </li>
