@@ -53,21 +53,21 @@
       </li>
     {% endif %}
 
-    {% if duoclieu.tacdungvacongdung_set.count > 0 %}
-      <li><u>Tác dụng và công dụng</u>:
-        <ul><br>
-          {% for chitiet in duoclieu.tacdungvacongdung_set.all %}
-          <li>{{chitiet.tac_dung_va_cong_dung|safe}}</li><br>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endif %}
-
     {% if duoclieu.thanhphanhoahoc_set.count > 0 %}
       <li><u>Thành phần hoá học</u>:
         <ul><br>
           {% for chitiet in duoclieu.thanhphanhoahoc_set.all %}
           <li>{{chitiet.thanh_phan_hoa_hoc|safe}}</li><br>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if duoclieu.tacdungvacongdung_set.count > 0 %}
+      <li><u>Tác dụng và công dụng</u>:
+        <ul><br>
+          {% for chitiet in duoclieu.tacdungvacongdung_set.all %}
+          <li>{{chitiet.tac_dung_va_cong_dung|safe}}</li><br>
           {% endfor %}
         </ul>
       </li>
