@@ -15,9 +15,9 @@
     <ol >
     {% if duoclieu.tenkhoahoc_set.count > 0 %}
       <li><u>Tên khoa học</u>:
-        <ul class="w3-padding">
+        <ul>
           {% for chitiet in duoclieu.tenkhoahoc_set.all %}
-          <li><i>{{chitiet.ten_latinh_spp}}</i> {% if chitiet.ten_tieng_viet_spp is none %}{% else%}({{chitiet.ten_tieng_viet_spp}}){% endif %}</li>
+          <li class="w3-padding"><i>{{chitiet.ten_latinh_spp}}</i> {% if chitiet.ten_tieng_viet_spp is none %}{% else%}({{chitiet.ten_tieng_viet_spp}}){% endif %}</li>
           {% endfor %}
         </ul>
       </li>
