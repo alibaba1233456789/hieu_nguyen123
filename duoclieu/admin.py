@@ -68,7 +68,7 @@ class HinhAnhMinhHoaInline(admin.TabularInline):
 @admin.register(DuocLieu)
 class DuocLieuAdmin(admin.ModelAdmin):
     list_display =('ten_tieng_viet', 'ten_la_tinh', 'ho_thuc_vat', 'ngay_dang', 'nguoi_dang')
-    inlines = [TenKhoaHocInline, DacDiemVaPhanBoInline, BoPhanDungInline, ThanhPhanHoaHocInline, DacDiemViPhauVaBotInline, TacDungVaCongDungInline, CheBienInline, ChePhamInline, ChuYInline, GhiChuInline, HinhAnhMinhHoaInline, HinhAnhBoSungInline]
+    inlines = [TenKhoaHocInline, DacDiemVaPhanBoInline, BoPhanDungInline, ThanhPhanHoaHocInline, TacDungVaCongDungInline, CheBienInline, ChePhamInline, ChuYInline, GhiChuInline, DacDiemViPhauVaBotInline, HinhAnhMinhHoaInline, HinhAnhBoSungInline]
 
     prepopulated_fields = {'slug': ('ten_la_tinh',)}
 
