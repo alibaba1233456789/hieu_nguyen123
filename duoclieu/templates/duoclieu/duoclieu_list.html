@@ -12,7 +12,7 @@
   <tbody id="myTable">
   {% for duoclieu in duoclieu_list %}
     <tr>
-      <td class="reset tb1 w3-center"><a class="{% if duoclieu.dacdiemvaphanbo_set.count > 1 or duoclieu.hinhanhminhhoa_set.count > 1 %} link {% else %} w3-text-red {% endif %} "href="{{duoclieu.get_absolute_url}}">{{ duoclieu.ten_tieng_viet }}</a></td>
+      <td class="reset tb1 w3-center"><a class="{% if duoclieu.dacdiemvaphanbo_set.count > 0 or duoclieu.tacdungvacongdung_set.count > 0 %} link {% else %} w3-text-red {% endif %} "href="{{duoclieu.get_absolute_url}}">{{ duoclieu.ten_tieng_viet }}</a></td>
       <td class="tb1 w3-center"><a href="{{duoclieu.get_absolute_url}}"><i>{{ duoclieu.ten_la_tinh }}</i></a><br><br><a class="reset" href="{{duoclieu.ho_thuc_vat.get_absolute_url}}">({{ duoclieu.ho_thuc_vat.Tieng_viet}} - <strong>{{ duoclieu.ho_thuc_vat.La_tinh}})</strong></a></td>
       <td class="tb1 w3-padding">
         {% for tacdung in duoclieu.tacdungvacongdung_set.all%}
