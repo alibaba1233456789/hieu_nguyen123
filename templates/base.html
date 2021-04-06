@@ -81,11 +81,11 @@
       <a class="w3-bar-item fa fa-home w3-large w3-hide-large" href="{% url 'home' %}"></a>
       <a class="fa fa-pagelines w3-bar-item w3-large w3-hide-large" href="{% url 'duoc-lieu-hoc' %}"></a>
       {% if user.is_authenticated %}
-        <a class="w3-bar-item fa w3-large w3-right" href="{% url 'logout'%}?next={% url 'home' %}"><strong class="w3-text-brown">Log out</strong></a>
-        <div class="w3-bar-item fa fa-user-circle w3-large w3-right"><strong class="w3-text-white"> {{ user.get_username }}</strong></div>
+        <a class="w3-bar-item fa fa-sign-out w3-large w3-right" href="{% url 'logout'%}?next={% url 'home' %}"><strong class="w3-text-brown w3-hide-small w3-hide-medium">Log out</strong></a>
+        <div class="w3-bar-item fa fa-user-circle-o w3-large w3-right w3-text-blue"><strong class="w3-text-white w3-hide-small w3-hide-medium"> {{ user.get_username }}</strong></div>
       {% else %}
-        <a class="w3-bar-item fa fa-user-plus w3-large w3-right " href="{% url 'signup'%}"><span> Đăng ký</span></a>
-        <a class="w3-bar-item fa fa-user-circle-o w3-large w3-right" href="{% url 'login'%}?next={% url 'home' %}"><span> Đăng nhập</span></a>
+        <a class="w3-bar-item fa fa-user-plus w3-large w3-right " href="{% url 'signup'%}"><span class="w3-hide-small w3-hide-medium"> Đăng ký</span></a>
+        <a class="w3-bar-item fa fa-user w3-large w3-right" href="{% url 'login'%}?next={% url 'home' %}"><span class="w3-hide-small w3-hide-medium"> Đăng nhập</span></a>
       {% endif %}
       <!--a class="w3-bar-item fa fa-home w3-large w3-hover-yellow w3-right" href="{% url 'home' %}"></a-->
       <a class="w3-bar-item w3-text-aqua w3-hide-medium w3-hide-small w3-left"  style="font-family:'Copperplate'" href="{% url 'home' %}">Website kiến thức dược học số 1 Việt Nam</a>
