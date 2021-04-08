@@ -16,7 +16,7 @@
   <ol type="I">
     {% for lv1 in level0.level1_set.all %}
       {% if lv1.tieu_de_1 is not None %}
-      <li><u><strong>{{lv1.tieu_de_1}}</strong></u>:</li><br>
+      <li><u><strong>{{lv1.tieu_de_1}}</strong></u>:</li>
       {% endif %}
       {% if lv1.noi_dung is not None %}
       <p>{{lv1.noi_dung|safe}}</p>
