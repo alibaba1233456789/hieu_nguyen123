@@ -142,7 +142,7 @@ class Level1Admin(admin.ModelAdmin):
 #--------------------------------------
 
 @admin.register(Level2)
-class Level2Admin(admin.ModelAdmin):
+class Level1Admin(admin.ModelAdmin):
     list_display =('tieu_de_2','level_1')
     fields = [('tieu_de_2', 'level_1'), 'noi_dung']
     inlines = [HinhAnhLv2Inline, Level3Inline]
