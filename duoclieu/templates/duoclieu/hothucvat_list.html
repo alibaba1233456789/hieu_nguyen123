@@ -14,13 +14,13 @@
         <td class="tb1 w3-center w3-padding"><a class="{% if hothucvat.duoclieu_set.count < 1%} w3-text-red {% else %} link {% endif %} w3-padding" href="{{hothucvat.get_absolute_url}}">{{ hothucvat.Tieng_viet|upper }}</a><br>(<strong>{{hothucvat.La_tinh}}</strong>)</td>
         <td class="tb1 w3-padding">
           {% for duoclieu in hothucvat.duoclieu_set.all %}
-          <a class="{% if duoclieu.dacdiemvaphanbo_set.count > 0 or duoclieu.tacdungvacongdung_set.count > 0 %} link {% else %} w3-text-red {% endif %}" href="{{duoclieu.get_absolute_url}}">{{duoclieu.ten_tieng_viet}}</a><strong style="font-size: 1.5em">|</strong>
-          {% endfor %} </td>
+          <a class="{% if duoclieu.dacdiemvaphanbo_set.count > 0 or duoclieu.tacdungvacongdung_set.count > 0 %} link {% else %} w3-text-red {% endif %}" href="{{duoclieu.get_absolute_url}}">{{duoclieu.ten_tieng_viet}} </a><strong style="font-size: 1.5em">|</strong>
+          {% endfor %}</td>
       </tr>
     {% endfor %}
     </tbody>
     </table>
-    <br>s
+    <br>
   {% else %}
     <p>Chưa cập nhật.</p>
   {% endif %}
