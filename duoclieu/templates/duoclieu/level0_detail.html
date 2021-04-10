@@ -16,7 +16,7 @@
   <ol type="I">
     {% for lv1 in level0.level1_set.all %}
       {% if lv1.tieu_de_1 is not None %}
-      <li><u><strong>{{lv1.tieu_de_1}}</strong></u>:</li>
+      <li><u><strong>{{lv1.tieu_de_1|upper}}</strong></u>:</li>
       {% endif %}
       {% if lv1.noi_dung is not None %}
       <p>{{lv1.noi_dung|safe}}</p>
@@ -33,7 +33,7 @@
             {% if lv1.hinhanhlv1_set.count > 1 %}
             <td>
               <p class="w3-center"><img src="{{lv1.hinhanhlv1_set.all.1.hinh.url}}" width="{% if lv1.hinhanhlv1_set.count > 2 %} 75% {% else%} 300px {% endif%}"></p>
-              <p class="w3-center"><i>{{lv1.hinhanhlv1_set.all.1.ten_hinh}}</i></p>
+              <p class="w3-center"><b>{{lv1.hinhanhlv1_set.all.1.ten_hinh}}</b></p>
             </td>
             {% endif %}
             {% if lv1.hinhanhlv1_set.count > 2 %}
