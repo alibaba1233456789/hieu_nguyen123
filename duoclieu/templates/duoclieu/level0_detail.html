@@ -7,16 +7,18 @@
 
 {% block sidebar2 %}
 <p><small><u>Điều hướng</u></small></p>
-<small><button class="button">I</button>
-<button class="button">II</button>
-<button class="button">III</button>
-<button class="button">IV</button>
-<button class="button">V</button>
-<button class="button">VI</button>
-<button class="button">VII</button>
-<button class="button">VIII</button>
-<button class="button">IX</button>
-<button class="button">X</button></small>
+<small>
+<button class="button" href="#C1">I</button>
+<button class="button" href="#C2">II</button>
+<button class="button" href="#C3">III</button>
+<button class="button" href="#C4">IV</button>
+<button class="button" href="#C5">V</button>
+<button class="button" href="#C6">VI</button>
+<button class="button" href="#C7">VII</button>
+<button class="button" href="#C8">VIII</button>
+<button class="button" href="#C9">IX</button>
+<button class="button" href="#C10">X</button>
+</small>
 {% endblock %}
 
 {% block content %}
@@ -26,7 +28,7 @@
   <ol type="I">
     {% for lv1 in level0.level1_set.all %}
       {% if lv1.tieu_de_1 is not None %}
-      <li><u><strong>{{lv1.tieu_de_1|upper}}</strong></u>:</li>
+      <li><u><strong>{{lv1.tieu_de_1|upper|safe}}</strong></u>:</li>
       {% endif %}
       {% if lv1.noi_dung is not None %}
       <p>{{lv1.noi_dung|safe}}</p>
