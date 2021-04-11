@@ -11,11 +11,11 @@
 <small>
   {% for lv1 in level0.level1_set.all %}
     {% if lv1.tieu_de_1 is not None %}
-      <a href="#C{{ forloop.counter }}"><div class="padding_left"><button class="button">{% if forloop.counter == 1 %}I{% endif%}{% if forloop.counter == 2 %}II{% endif%}{% if forloop.counter == 3 %}III{% endif%}{% if forloop.counter == 4 %}IV{% endif%}{% if forloop.counter == 5 %}V{% endif%}{% if forloop.counter == 6 %}VI{% endif%}{% if forloop.counter == 7 %}VII{% endif%}{% if forloop.counter == 8 %}VIII{% endif%}{% if forloop.counter == 9 %}IX{% endif%}{% if forloop.counter == 10 %}X{% endif%}{% if forloop.counter == 11 %}XI{% endif%}{% if forloop.counter == 12 %}XII{% endif%}{% if forloop.counter == 13 %}XIII{% endif%}{% if forloop.counter == 14 %}XIV{% endif%}{% if forloop.counter == 15 %}XV{% endif%}</button></div></a>
+      <a href="#a{{ forloop.counter }}"><div class="padding_left"><button class="button">{% if forloop.counter == 1 %}I{% endif%}{% if forloop.counter == 2 %}II{% endif%}{% if forloop.counter == 3 %}III{% endif%}{% if forloop.counter == 4 %}IV{% endif%}{% if forloop.counter == 5 %}V{% endif%}{% if forloop.counter == 6 %}VI{% endif%}{% if forloop.counter == 7 %}VII{% endif%}{% if forloop.counter == 8 %}VIII{% endif%}{% if forloop.counter == 9 %}IX{% endif%}{% if forloop.counter == 10 %}X{% endif%}{% if forloop.counter == 11 %}XI{% endif%}{% if forloop.counter == 12 %}XII{% endif%}{% if forloop.counter == 13 %}XIII{% endif%}{% if forloop.counter == 14 %}XIV{% endif%}{% if forloop.counter == 15 %}XV{% endif%}</button></div></a>
 
       {% for lv2 in lv1.level2_set.all %}
         {% if lv2.tieu_de_2 is not None %}
-          <span class="padding_left"><a href="#D{{ lv2.id }}"><button class="button2">{{ forloop.counter }}</button></a></span>
+          <span class="padding_left"><a href="#b{{ lv2.id }}"><button class="button2">{{ forloop.counter }}</button></a></span>
         {% endif %}
       {% endfor %}
     {% endif %}
@@ -30,7 +30,7 @@
   <ol type="I">
     {% for lv1 in level0.level1_set.all %}
       {% if lv1.tieu_de_1 is not None %}
-      <li id="C{{ forloop.counter }}"><u><strong>{{lv1.tieu_de_1|upper}}</strong></u>:</li>
+      <li id="a{{ forloop.counter }}"><u><strong>{{lv1.tieu_de_1|upper}}</strong></u>:</li>
       {% endif %}
       {% if lv1.noi_dung is not None %}
       <p>{{lv1.noi_dung|safe}}</p>
@@ -125,7 +125,7 @@
       <ol type="1">
         {% for lv2 in lv1.level2_set.all %}
           {% if lv2.tieu_de_2 is not None %}
-          <li id="D{{ lv2.id }}"><u><b>{{lv2.tieu_de_2}}</b></u>:</li>
+          <li id="b{{ lv2.id }}"><u><b>{{lv2.tieu_de_2}}</b></u>:</li>
           {% endif %}
           {% if lv2.noi_dung is not None %}
           <p>{{lv2.noi_dung|safe}}</p>
