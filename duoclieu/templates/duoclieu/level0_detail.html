@@ -8,16 +8,11 @@
 {% block sidebar2 %}
 <p><small><u>Điều hướng</u></small></p>
 <small>
-  <a href="#C1"><button class="button">I</button></a>
-  <a href="#C2"><button class="button">II</button></a>
-  <a href="#C3"><button class="button">III</button></a>
-  <a href="#C4"><button class="button">IV</button></a>
-  <a href="#C5"><button class="button">V</button></a>
-  <a href="#C6"><button class="button">VI</button></a>
-  <a href="#C7"><button class="button">VII</button></a>
-  <a href="#C8"><button class="button">VIII</button></a>
-  <a href="#C9"><button class="button">IX</button></a>
-  <a href="#C10"><button class="button"><a href="#C10">X</button></a>
+  {% for lv1 in level0.level1_set.all %}
+    {% if lv1.tieu_de_1 is not None %}
+  <a href="#C{{ forloop.counter }}"><button class="button">{% if forloop.counter == 1 %}I{% endif%}{% if forloop.counter == 2 %}II{% endif%}{% if forloop.counter == 3 %}III{% endif%}{% if forloop.counter == 4 %}IV{% endif%}{% if forloop.counter == 5 %}V{% endif%}{% if forloop.counter == 6 %}VI{% endif%}{% if forloop.counter == 7 %}VII{% endif%}{% if forloop.counter == 8 %}VIII{% endif%}{% if forloop.counter == 9 %}IX{% endif%}{% if forloop.counter == 10 %}X{% endif%}{% if forloop.counter == 11 %}XI{% endif%}{% if forloop.counter == 12 %}XII{% endif%}{% if forloop.counter == 13 %}XIII{% endif%}{% if forloop.counter == 14 %}XIV{% endif%}{% if forloop.counter == 15 %}XV{% endif%}</button></a>
+    {% endif %}
+  {% endfor %}
 </small>
 {% endblock %}
 
@@ -28,6 +23,7 @@
   <ol type="I">
     {% for lv1 in level0.level1_set.all %}
       {% if lv1.tieu_de_1 is not None %}
+      <hr id="C{{ forloop.counter }}"><br>
       <li><u><strong>{{lv1.tieu_de_1|upper|safe}}</strong></u>:</li>
       {% endif %}
       {% if lv1.noi_dung is not None %}
