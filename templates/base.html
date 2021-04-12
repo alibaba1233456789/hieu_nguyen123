@@ -9,10 +9,13 @@
   <meta name="Description" content= "Web thông tin dược số một Việt Nam, cung cấp đầy đủ tất cả kiến thức liên quan đến thuốc và cách chăm sóc sức khoẻ.">
   <style>
 
+    .index_-1{z-index: -1;}
+    .index-0{z-index: 0;}
+    .index-1{z-index: 1;}
     .index-2{z-index: 2;}
     .index-3{z-index: 3;}
     ol.none {list-style-type: none;}
-    .cap3{text-align: center; border-radius: 5px; padding-right: 5px; padding-left: 5px; padding-top: 1px; padding-bottom: 1px; z-index: -1;}
+    .cap3{text-align: center; border-radius: 5px; padding-right: 5px; padding-left: 5px; padding-top: 1px; padding-bottom: 1px;}
     .padding_left{padding-left: 10px;}
     li{scroll-margin-top: 3em;}
     .margin-30px{margin-bottom: -30px;}
@@ -80,10 +83,12 @@
       });
     });
 
+    $(document).ready(function(){$("#open_close").click(function(){$("#mySidebar").toggle();});});
+
   </script>
 </head>
 <body class="w3-sand">
-  <div class="w3-light-blue w3-sidebar w3-bar-block w3-collapse index-3" style="width:200px;" id="mySidebar">
+  <div class="w3-light-blue w3-sidebar w3-bar-block w3-collapse" style="width:200px;" id="mySidebar">
     {% block sidebar %}
     <br class="w3-hide-medium w3-hide-small">
     <a class="w3-bar-item fa fa-bars w3-large w3-hide-large" onclick="w3_close()"></a>
@@ -104,13 +109,13 @@
   </div>
 
   <div class="w3-main" style="margin-left:200px">
-    <div class="w3-bar w3-light-blue sticky index-2">
-      <a class="w3-bar-item  fa fa-bars w3-large w3-hide-large" onclick="w3_open()"</a><br>
+    <div class="w3-bar w3-green sticky index-1">
+      <a class="w3-bar-item  fa fa-bars w3-large w3-hide-large" id="open_close""</a><br>
       <a class="w3-bar-item fa fa-home w3-large w3-hide-large" href="{% url 'home' %}"></a>
       <a class="fa fa-pagelines w3-bar-item w3-large w3-hide-large" href="{% url 'duoc-lieu-hoc' %}"></a>
       {% if user.is_authenticated %}
-        <a class="w3-bar-item fa fa-sign-out w3-large w3-right" href="{% url 'logout'%}?next={% url 'home' %}"><strong class="w3-text-brown w3-hide-small w3-hide-medium"> Log out</strong></a>
-        <div class="w3-bar-item fa fa-user-circle-o w3-large w3-right w3-text-blue"><strong class="w3-text-white w3-hide-small w3-hide-medium"> {{ user.get_username }}</strong></div>
+        <a class="w3-bar-item fa fa-sign-out w3-large w3-right" href="{% url 'logout'%}?next={% url 'home' %}"><strong class="w3-text-black w3-hide-small w3-hide-medium"> Log out</strong></a>
+        <div class="w3-bar-item fa fa-user-circle-o w3-large w3-right w3-text-black"><strong class="w3-text-white w3-hide-small w3-hide-medium"> {{ user.get_username }}</strong></div>
       {% else %}
         <a class="w3-bar-item fa fa-user-plus w3-large w3-right " href="{% url 'signup'%}"><span class="w3-hide-small w3-hide-medium"> Đăng ký</span></a>
         <a class="w3-bar-item fa fa-user w3-large w3-right" href="{% url 'login'%}?next={% url 'home' %}"><span class="w3-hide-small w3-hide-medium"> Đăng nhập</span></a>
