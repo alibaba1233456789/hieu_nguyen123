@@ -9,6 +9,7 @@
   <meta name="Description" content= "Web thông tin dược số một Việt Nam, cung cấp đầy đủ tất cả kiến thức liên quan đến thuốc và cách chăm sóc sức khoẻ.">
   <style>
 
+    .index-2{z-index: 2;}
     ol.none {list-style-type: none;}
     .cap3{text-align: center; border-radius: 5px; padding-right: 5px; padding-left: 5px; padding-top: 1px; padding-bottom: 1px; z-index: -1;}
     .padding_left{padding-left: 10px;}
@@ -102,7 +103,7 @@
   </div>
 
   <div class="w3-main" style="margin-left:200px">
-    <div class="w3-bar w3-light-blue sticky">
+    <div class="w3-bar w3-light-blue sticky index-2">
       <a class="w3-bar-item  fa fa-bars w3-large w3-hide-large" onclick="w3_open()"</a><br>
       <a class="w3-bar-item fa fa-home w3-large w3-hide-large" href="{% url 'home' %}"></a>
       <a class="fa fa-pagelines w3-bar-item w3-large w3-hide-large" href="{% url 'duoc-lieu-hoc' %}"></a>
