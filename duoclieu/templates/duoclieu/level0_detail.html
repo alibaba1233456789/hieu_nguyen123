@@ -221,7 +221,7 @@
           <ol type="a">
             {% for lv3 in lv2.level3_set.all %}
               {% if lv3.tieu_de_3 is not None %}
-              <li><div class="w3-black w3-text-white w3-opacity">{{lv3.tieu_de_3}}</div>:</li>
+              <li><div class="w3-black w3-text-white w3-opacity w3-show-inline-block">{{lv3.tieu_de_3}}</div>:</li>
               {% endif %}
               {% if lv3.noi_dung is not None %}
               <p>{{lv3.noi_dung|safe}}</p>
