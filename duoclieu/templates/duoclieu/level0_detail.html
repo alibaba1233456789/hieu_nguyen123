@@ -2,7 +2,7 @@
 
 {% block style %}
   ol,ul { padding: 0px 0px 0px 5px; }
-  ol.padding_10px { padding: 0px 0px 0px 10px; }
+  .padding_10px { padding: 0px 0px 0px 10px; }
   ul.ul_50px { padding: 0px 0px 0px 50px; }
   i{ color: #2196F3; }
 {% endblock %}
@@ -221,7 +221,7 @@
           <ol type="a">
             {% for lv3 in lv2.level3_set.all %}
               {% if lv3.tieu_de_3 is not None %}
-              <li><u>{{lv3.tieu_de_3}}</u>:</li>
+              <li><div class="w3-black w3-text-white w3-opacity">{{lv3.tieu_de_3}}</div>:</li>
               {% endif %}
               {% if lv3.noi_dung is not None %}
               <p>{{lv3.noi_dung|safe}}</p>
