@@ -218,7 +218,7 @@
           {% endif %}
 <!-- END HÌNH ẢNH CẤP 2-->
           {% if lv2.level3_set.count > 0 %}
-          <ol type="a">
+          <ol class="none">
             {% for lv3 in lv2.level3_set.all %}
               {% if lv3.tieu_de_3 is not None %}
               <li><div class="w3-black w3-text-white w3-opacity w3-show-inline-block padding_left_right">{{lv3.tieu_de_3}}</div></li>
@@ -313,7 +313,7 @@
               {% endif %}
 <!-- END HÌNH ẢNH CẤP 3-->
               {% if lv3.level4_set.count > 0 %}
-              <ol type="i">
+              <ol type="a">
                 {% for lv4 in lv3.level4_set.all %}
                   {% if lv4.tieu_de_4 is not None %}
                   <li><u>{{lv4.tieu_de_4}}</u>:</li>
