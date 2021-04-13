@@ -180,7 +180,7 @@ class HinhAnhLv0(models.Model):
 class Level1(models.Model):
     tieu_de_1 = models.CharField(max_length = 200, verbose_name = 'tiêu đề cấp 1', null=True, blank = True)
     noi_dung = models.TextField(max_length = 3000, verbose_name = 'nội dung', null=True, blank = True)
-    level_0 = models.ForeignKey('Level0', on_delete = models.CASCADE, verbose_name = '<-- Level0')
+    level_0 = models.ForeignKey('Level0', on_delete = models.CASCADE, verbose_name = '<-- Tiêu đề chính')
     def __str__(self):
         return f'{self.tieu_de_1}:'
 

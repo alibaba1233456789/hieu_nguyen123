@@ -137,33 +137,33 @@ class Level0Admin(admin.ModelAdmin):
 @admin.register(Level1)
 class Level1Admin(admin.ModelAdmin):
     list_display =('tieu_de_1','level_0')
-    fields = [('tieu_de_1', 'level_0'), 'noi_dung']
+    fields = [('tieu_de_1', 'level_0')]
     inlines = [HinhAnhLv1Inline, Level2Inline]
 #--------------------------------------
 
 @admin.register(Level2)
 class Level1Admin(admin.ModelAdmin):
     list_display =('tieu_de_2','level_1')
-    fields = [('tieu_de_2', 'level_1'), 'noi_dung']
+    fields = [('tieu_de_2', 'level_1')]
     inlines = [HinhAnhLv2Inline, Level3Inline]
 #--------------------------------------
 
 @admin.register(Level3)
 class Level3Admin(admin.ModelAdmin):
     list_display =('tieu_de_3','level_2')
-    fields = [('tieu_de_3', 'level_2'), 'noi_dung']
+    fields = [('tieu_de_3', 'level_2')]
     inlines = [HinhAnhLv3Inline, Level4Inline]
 #--------------------------------------
 @admin.register(Level4)
 class Level3Admin(admin.ModelAdmin):
     list_display =('tieu_de_4','level_3')
-    fields = [('tieu_de_4', 'level_3'), 'noi_dung']
+    fields = [('tieu_de_4', 'level_3')]
     inlines = [HinhAnhLv4Inline, Level5Inline]
 #--------------------------------------
 @admin.register(Level5)
 class Level3Admin(admin.ModelAdmin):
     list_display =('tieu_de_5','level_4')
-    fields = [('tieu_de_5', 'level_4'), 'noi_dung']
+    fields = [('tieu_de_5', 'level_4')]
     inlines = [HinhAnhLv5Inline]
 #--------------------------------------
 #--------------------------------------
