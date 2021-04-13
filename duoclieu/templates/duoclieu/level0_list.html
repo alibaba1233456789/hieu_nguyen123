@@ -10,7 +10,7 @@
     {% for level0 in level0_list %}
     <tr>
       <td class="tb1 w3-padding"><a class="{% if level0.level1_set.count < 1 %} w3-text-red {% else %} link {% endif %}" href="{{level0.get_absolute_url}}">{{level0.tieu_de_chinh|safe}}</a></td>
-      <td class="tb1 w3-padding">{{level0.noi_dung|safe}}</td>
+      <td class="tb1">{{level0.noi_dung|safe}}</td>
     <tr>
     {% endfor %}
   </table>
