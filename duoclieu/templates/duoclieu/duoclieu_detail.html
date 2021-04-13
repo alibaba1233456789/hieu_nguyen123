@@ -25,7 +25,7 @@
 
     {% if duoclieu.dacdiemvaphanbo_set.count > 0 %}
       <li><u>Đặc điểm và phân bố</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.dacdiemvaphanbo_set.all %}
           <li>{{chitiet.dac_diem_va_phan_bo|safe}}</li>
           {% endfor %}
@@ -35,7 +35,7 @@
 
     {% if duoclieu.bophandung_set.count > 0 %}
       <li><u>Bộ phận dùng</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.bophandung_set.all %}
           <li>{{chitiet.bo_phan_dung|safe}}</li>
           {% endfor %}
@@ -45,7 +45,7 @@
 
     {% if duoclieu.dacdiemviphauvabot_set.count > 0 %}
       <li><u>Đặc điểm vi phẫu và bột</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.dacdiemviphauvabot_set.all %}
           <li>{{chitiet.dac_diem_vi_phau_va_bot|safe}}</li>
           {% endfor %}
@@ -55,7 +55,7 @@
 
     {% if duoclieu.thanhphanhoahoc_set.count > 0 %}
       <li><u>Thành phần hoá học</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.thanhphanhoahoc_set.all %}
           <li>{{chitiet.thanh_phan_hoa_hoc|safe}}</li>
           {% endfor %}
@@ -65,7 +65,7 @@
 
     {% if duoclieu.tacdungvacongdung_set.count > 0 %}
       <li><u>Tác dụng và công dụng</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.tacdungvacongdung_set.all %}
           <li>{{chitiet.tac_dung_va_cong_dung|safe}}</li>
           {% endfor %}
@@ -75,7 +75,7 @@
 
     {% if duoclieu.chebien_set.count > 0 %}
       <li><u>Chế biến</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.chebien_set.all %}
           <li>{{chitiet.che_bien|safe}}</li>
           {% endfor %}
@@ -85,7 +85,7 @@
 
     {% if duoclieu.chepham_set.count > 0 %}
       <li><u>Chế phẩm</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.chepham_set.all %}
           <li>{{chitiet.che_pham|safe}}</li>
           {% endfor %}
@@ -95,7 +95,7 @@
 
     {% if duoclieu.chuy_set.count > 0 %}
       <li><u>Chú ý</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.chuy_set.all %}
           <li>{{chitiet.chu_y|safe}}</li>
           {% endfor %}
@@ -105,7 +105,7 @@
 
     {% if duoclieu.ghichu_set.count > 0 %}
       <li><u>Ghi chú</u>:
-        <ul><br>
+        <ul>
           {% for chitiet in duoclieu.ghichu_set.all %}
           <li>{{chitiet.ghi_chu|safe}}</li>
             {% if duoclieu.hinhanhbosung_set.count > 0 %}
