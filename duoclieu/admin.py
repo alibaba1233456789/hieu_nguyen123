@@ -136,7 +136,7 @@ class Level0Admin(admin.ModelAdmin):
 
 @admin.register(Level1)
 class Level1Admin(admin.ModelAdmin):
-    list_display =('tieu_de_1','level_0')
+    list_display =('tieu_de_1','level_0', 'noi_dung')
     fields = [('tieu_de_1', 'level_0')]
     inlines = [HinhAnhLv1Inline, Level2Inline]
 #--------------------------------------
