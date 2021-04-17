@@ -3,9 +3,8 @@ from django.urls import reverse
 from datetime import date, datetime
 from django.utils import timezone
 from django.contrib.auth.models import User
-#------------------------------------------------------------------
 from django.template.defaultfilters import slugify
-
+#------------------------------------------------------------------
 class HoThucVat(models.Model):
     La_tinh = models.CharField(max_length = 200, verbose_name ='họ latinh')
     Tieng_viet = models.CharField(max_length = 200, verbose_name = 'họ tiếng việt')
