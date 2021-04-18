@@ -4,14 +4,6 @@ from datetime import date, datetime
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
-#------------------------------------------------------------------
-class LoinoiDauDL(models.Model):
-        loi_noi_dau = models.TextField(max_length = 1000, verbose_name = 'lời nói đầu', null = True, blank = True, help_text = 'Mỗi "+Add" là một đoạn văn trong lời nói đầu.')
-
-        class Meta:
-           verbose_name = 'lời nói đầu'
-           verbose_name_plural = '0. Lời nói đầu'
-           ordering = ['id']
 
 #------------------------------------------------------------------
 class HoThucVat(models.Model):
