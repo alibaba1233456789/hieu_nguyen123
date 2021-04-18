@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import HoThucVat, DuocLieu, DacDiemVaPhanBo, BoPhanDung, DacDiemViPhauVaBot, ThanhPhanHoaHoc, TacDungVaCongDung, CheBien, HinhAnhMinhHoa, ChePham, ChuY, GhiChu, HinhAnhBoSung, TenKhoaHoc
+from .models import LoinoiDauDL, HoThucVat, DuocLieu, DacDiemVaPhanBo, BoPhanDung, DacDiemViPhauVaBot, ThanhPhanHoaHoc, TacDungVaCongDung, CheBien, HinhAnhMinhHoa, ChePham, ChuY, GhiChu, HinhAnhBoSung, TenKhoaHoc
+#--------------------------------------
+admin.site.register(LoinoiDauDL)
 #--------------------------------------
 class DuocLieuInline(admin.TabularInline):
     model = DuocLieu

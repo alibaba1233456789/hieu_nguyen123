@@ -13,7 +13,13 @@
 <p class="w3-hide-large"><small>Ấn (☰) góc trên bên trái để vào để xem/chọn đề mục. </small></p>
 <div><strong>I. <u>Lời nói đầu</u></strong>:</div>
 <div class="w3-margin">
-  <p class="w3-text-red">Chưa cập nhật.</p>
+{% if Loi_noi_dau.count < 1 %}
+<p class="w3-center w3-text-red">Chưa cập nhật.</p>
+{% else %}
+  {% for section in Loi_noi_dau %}
+  <p>{{section.loi_noi_dau}}</p>
+  {% endfor %}
+{% endif %}
 </div>
 <div><strong>II. <u>Tiến độ cập nhật</u></strong>:</div>
     <ul class="center1">

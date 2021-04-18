@@ -1,18 +1,19 @@
 from django.shortcuts import render
-from .models import HoThucVat, DuocLieu, Level0
+from .models import LoinoiDauDL, HoThucVat, DuocLieu, Level0
 #-----------------------------------------------------
 def DuocLieuHoc(request):
     """View function for home page of site."""
 
-
     So_ho_thuc_vat = HoThucVat.objects.all().count()
     So_duoc_lieu = DuocLieu.objects.all().count()
     So_chuong = Level0.objects.all().count()
+    Loi_noi_dau = LoinoiDauDL.objects.all()
 
     context = {
         'So_ho_thuc_vat': So_ho_thuc_vat,
         'So_duoc_lieu': So_duoc_lieu,
         'So_chuong': So_chuong,
+        'Loi_noi_dau': Loi_noi_dau
     }
     return render(request, 'duoc_lieu_hoc.html', context=context)
 
