@@ -10,7 +10,7 @@ class LoiNoiDauDL(models.Model):
     loi_noi_dau = models.TextField(max_length = 1000, verbose_name = 'Lời nói đầu', null = True, blank = True,)
 
     class Meta:
-       verbose_name = 'Lời nói đầut'
+       verbose_name = 'Lời nói đầu'
        verbose_name_plural = '0. Lời nói đầu'
        ordering = ['id']
 #------------------------------------------------------------------
