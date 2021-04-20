@@ -7,7 +7,7 @@ from django.template.defaultfilters import slugify
 
 #------------------------------------------------------------------
 class LoiNoiDauDL(models.Model):
-    loi_noi_dau = models.TextField(max_length = 1000, verbose_name = 'Lời nói đầu', null = True, blank = True,)
+    loi_noi_dau = models.TextField(max_length = 1000, verbose_name = 'Lời nói đầu', null = True, blank = True, help_text = 'Mỗi "+Add" là một đoạn trong lời nói đầu. Hãy nhập những lời tâm huyết của bạn vào đây vì đây là phần người đọc sẽ thấy đầu tiên khi chọn khối kiến thức dược liệu.')
 
     class Meta:
        verbose_name = 'Lời nói đầu'
