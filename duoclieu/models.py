@@ -6,6 +6,15 @@ from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 #------------------------------------------------------------------
+class LoiNoiDauDL(models.Model):
+    loi_noi_dau = models.TextField(max_length = 1000, verbose_name = 'Lời nói đầu', null = True, blank = True,)
+
+    class Meta:
+       verbose_name = 'Lời nói đầut'
+       verbose_name_plural = '0. Lời nói đầu'
+       ordering = ['id']
+#------------------------------------------------------------------
+
 class HoThucVat(models.Model):
     La_tinh = models.CharField(max_length = 200, verbose_name ='họ latinh')
     Tieng_viet = models.CharField(max_length = 200, verbose_name = 'họ tiếng việt')
