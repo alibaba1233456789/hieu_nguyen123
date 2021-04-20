@@ -17,7 +17,7 @@
   <p class="w3-text-red">Chưa cập nhật.</p>
   {% else %}
     {% for section in loi_noi_dau %}
-      <p>{{section.loi_noi_dau}}</p>
+      <p>{{section.loi_noi_dau|safe}}</p>
     {% endfor %}
   {% endif %}
 </div>
