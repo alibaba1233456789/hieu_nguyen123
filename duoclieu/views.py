@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HoThucVat, DuocLieu, Level0
+from .models import LoiNoiDauDL, HoThucVat, DuocLieu, Level0
 #-----------------------------------------------------
 def DuocLieuHoc(request):
     """View function for home page of site."""
@@ -7,11 +7,13 @@ def DuocLieuHoc(request):
     So_ho_thuc_vat = HoThucVat.objects.all().count()
     So_duoc_lieu = DuocLieu.objects.all().count()
     So_chuong = Level0.objects.all().count()
+    loi_noi_dau = LoiNoiDauDL.objects.all()
 
     context = {
         'So_ho_thuc_vat': So_ho_thuc_vat,
         'So_duoc_lieu': So_duoc_lieu,
         'So_chuong': So_chuong,
+        'loi_noi_dau': loi_noi_dau,
     }
     return render(request, 'duoc_lieu_hoc.html', context=context)
 
