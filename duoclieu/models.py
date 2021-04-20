@@ -13,6 +13,9 @@ class LoiNoiDauDL(models.Model):
        verbose_name = 'Lời nói đầu'
        verbose_name_plural = '0. Lời nói đầu'
        ordering = ['id']
+
+    def __str__(self):
+        return f'Đoạn {self.id}'
 #------------------------------------------------------------------
 
 class HoThucVat(models.Model):
