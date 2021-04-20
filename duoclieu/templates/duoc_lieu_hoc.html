@@ -24,10 +24,11 @@
     {% endfor %}
   {% endif %}
 </div>
-<div><strong>II. <u>Tiến độ cập nhật</u></strong>:</div>
+<div><strong>II. <u>Nội dung</u></strong>:</div>
+  <p>Gồm <span class="w3-text-red"> {{ So_chuong }}</span> chương, click và <a class="link" href="{% url 'level0' %}">Link</a> để xem danh sánh chương.<p>
+<div><strong>III. <u>Phụ lục</u></strong>:</div>
     <ul class="center1">
       <li><a class="link" href="{% url 'ho-thuc-vat' %}">Họ thực vật<a>:<span class="w3-text-red"> {{ So_ho_thuc_vat }}</span></li>
       <li><a class="link" href="{% url 'duoclieu' %}">Dược liệu</a>:<span class="w3-text-red"> {{ So_duoc_lieu }}</span></li>
-      <li><a class="link" href="{% url 'level0' %}">Giáo trình lý thuyết</a>:<span class="w3-text-red"> {{ So_chuong }}</span></li>
     </ul>
 {% endblock %}
