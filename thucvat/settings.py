@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'hoa_ly.apps.HoaLyConfig',
     'sinh_hoa.apps.SinhHoaConfig',
     'cong_nghe_sinh_hoc.apps.CongNgheSinhHocConfig',
-    'thucvat.apps.ThucVatConfig',
 ]
 
 CLOUDINARY_STORAGE = {
