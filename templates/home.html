@@ -3,44 +3,34 @@
 <h2 class="w3-center" style="font-family:"><i>Lời nói đầu</i></h2>
 <div><strong>I. <u>Sứ mệnh</u></strong>:</div>
 <div>
-  <ol>
+  <ul>
     <li>Vấn đề đầu tiên cho mọi vấn đề sức khoẻ không phải là thuốc hay khả năng kinh tế mà là sự hiểu biết. Nếu từng người có đủ kiến thức để tự chăm sóc sức khoẻ cho bản thân thì sẽ giảm đáng kể gánh nặng tài chính cho bản thân và gánh nặng y tế cho xã hội.</li>
     <li>Nhận thấy thông tin về thuốc và sức khoẻ hiện tại trên internet cực kỳ hỗn loạn, thiếu thống nhất. Nên mục tiêu quan trọng nhất của nền tảng web này là cung cấp đến người Việt thông tin chuyên nghiệp, khoa học và cập nhật nhất về thuốc và các vấn đề sức khoẻ nói chung.</li>
     <li>Kết nối với những người giỏi nhất để cho ra sản phẩm thông tin tốt nhất.</li>
     <li>Liên kết với các công ty dược tốt nhất trên lãnh thổ Việt Nam, nhằm cung cấp cho bệnh nhân / người dùng thuốc, thuốc tốt nhất với giá cả hợp lý nhất.</li>
-  </ol>
+  </ul>
 </div>
 <div><strong>II. <u>Cách thức xây dựng thông tin</u></strong>:</div>
-  <ol>
+  <ul>
     <li>Xây dựng mô hình web cho từng phần nội dung theo <a class="link" href="https://www.djangoproject.com/">Django framework</a>.</li>
     <li>Tìm kiếm những người có chuyên môn phù hợp nhất để quản lý và cập nhật thông tin.</li>
-    <li>Đăng nhập admin site, cập nhật và hoàn thiện nội dung theo thời gian.</li><br>
-    <table class="tb1 center1"  width = "90%">{% load static %}
-      <tr>
-        <td width = "50%"><img type="image/png" src="{% static 'images/huong_dan_01.png' %}" width = "100%"></td>
-        <td width = "50%"><img type="image/png" src="{% static 'images/huong_dan_02.png' %}" width = "100%"></td>
-      </tr>
-      <tr>
-        <td><img type="image/png" src="{% static 'images/huong_dan_03.png' %}" width = "100%"></td>
-        <td><img type="image/png" src="{% static 'images/huong_dan_04.png' %}" width = "100%"></td>
-      </tr>
-    </table>
-    <li><b>Phân quyền:</b> Có 5 cấp phân quyền lần lượt là</li>
-    <ul class="ul-padding">
-      <li><u>Cấp 1</u>: Người xem vãng lai - Vô tình hoặc cố ý vào giao diện web. Được xem các phần nội dung phổ cập / công khai.</li>
-      <li><u>Cấp 2</u>: Có tài khoản - đã đăng ký tài khoản. Được xem các phần nội dung giới hạn.</li>
-      <li><u>Cấp 3</u>: Student - tài khoản được phân quyền. Được phép truy cập các nội dung học thuật giành cho sinh viên chuyên ngành dược / có chuyên môn về y tế.</li>
-      <li><u>Cấp 4</u>: Professor / cộng tác viên - Tham gia xây dựng nội dung. Được phân bổ một bộ phận để quản lý và cập nhật nội dung. Có tất cả các quyền của cấp 1, 2, 3.</li>
-      <li><u>Cấp 5</u>: Admin - Xây dựng trang web, hợp tác với cấp 4 để xây dựng mô hình, phân quyền cho các tài khoản phù hợp.</li>
-    </ul>
-  </ol>
+    <li>Đăng nhập admin site, cập nhật và hoàn thiện nội dung theo thời gian.</li>
+  </ul>
 <div><strong>III. <u>Cách thức tra cứu thông tin</u></strong>:</div>
-  <ol>
+  <ul>
     <li>Thông tin được xây dựng theo môn học trong chương trình đào tạo dược sĩ đại học với những kiến thức cơ bản nhất.</li>
     <li>Bổ sung những thông tin có giá trị thực tiễn và ứng dụng cao trong đời sống nhằm cũng cấp đến những người bình thường (không phải dược sĩ) những kiến thức hữu ích để có thể tự chăm sóc bản thân và gia đình.</li>
     <li>Cập nhật những thông tin về thuốc và kiến thức y học mới nhất trên thế giới (giành cho dược sĩ).</li>
-  </ol>
-<div><strong>IV. <u>Bảng số liệu thống kê tiến độ tự động cập nhật</u></strong>:</div><br>
+  </ul>
+<div><strong>IV. <u>Phân quyền</u></strong>:</div>
+<ul>
+  <li><bl>Cấp 1</bl>: Người xem vãng lai - Chưa đăng ký tài khoản. Được xem các phần nội dung phổ cập / công khai.</li>
+  <li><bl>Cấp 2</bl>: Có tài khoản - đã đăng ký tài khoản. Được xem các phần nội dung giới hạn.</li>
+  <li><bl>Cấp 3</bl>: Student - tài khoản được phân quyền. Được phép truy cập các nội dung học thuật giành cho sinh viên chuyên ngành dược / có chuyên môn về y tế.</li>
+  <li><bl>Cấp 4</bl>: Professor / cộng tác viên - Tham gia xây dựng nội dung. Được phân bổ một bộ phận để quản lý và cập nhật nội dung. Có tất cả các quyền của cấp 1, 2, 3.</li>
+  <li><bl>Cấp 5</bl>: Admin - Xây dựng trang web, hợp tác với cấp 4 để xây dựng mô hình, phân quyền cho các tài khoản phù hợp.</li>
+</ul>
+<div><strong>V. <u>Bảng số liệu thống kê tiến độ tự động cập nhật</u></strong>:</div><br>
   <table class="tb1 center1">
     <tr>
       <td style="vertical-align: text-top" class="tb1 w3-padding" width = "50%">
