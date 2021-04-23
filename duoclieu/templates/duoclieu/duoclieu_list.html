@@ -1,5 +1,6 @@
 {% extends "duoc_lieu_hoc.html" %}
 {% block content %}
+<div class="w3-container">
   <input class="w3-right" id="myInput" type="text" placeholder="Search.."> <br>
   <h3 class="w3-center" style="font-family:'Papyrus'">Danh sách dược liệu</h3>
   {% if duoclieu_list %}
@@ -26,4 +27,5 @@
   {% else %}
   <p>Chưa cập nhật.</p>
   {% endif %}
+</div>
 {% endblock %}
