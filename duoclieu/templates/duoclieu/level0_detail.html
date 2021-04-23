@@ -3,7 +3,7 @@
 {% block style %}
   ol,ul { padding: 0px 0px 0px 5px; }
   .padding_10px { padding: 0px 0px 0px 10px; }
-  .padding_15px { padding: 0px 0px 0px 15px; }
+  .padding_20px { padding: 0px 0px 0px 20px; }
   ul.ul_50px { padding: 0px 0px 0px 50px; }
   i{ color: #2196F3; }
 {% endblock %}
@@ -29,7 +29,7 @@
 <h3 class="w3-center">{{level0.tieu_de_chinh}}</h3>
 <div class="w3-padding">
   {% if level0.level1_set.count > 0 %}
-  <ol type="I" class="padding_15px">
+  <ol type="I" class="padding_20px">
     {% for lv1 in level0.level1_set.all %}
       {% if lv1.tieu_de_1 is not None %}
       <li id="a{{ forloop.counter }}"><u><strong>{{lv1.tieu_de_1|upper}}</strong></u>:</li>
