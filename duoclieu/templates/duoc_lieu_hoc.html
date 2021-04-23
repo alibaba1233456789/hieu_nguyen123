@@ -12,6 +12,7 @@
   <a class="fa fa-pagelines w3-bar-item" href="{% url 'duoclieu' %}">&nbsp;&nbsp;Dược liệu</a>
 {% endblock %}
 {% block content %}
+<div class="w3-container">
 <h2 class="w3-center" style="font-family:Lucida Handwriting">Dược liệu học</h2>
 <p class="w3-hide-large"><small>Ấn (☰) góc trên bên trái để vào để xem/chọn đề mục. </small></p>
 <div><strong>I. <u>Lời nói đầu</u></strong>:</div>
@@ -31,4 +32,5 @@
       <li><a class="link" href="{% url 'ho-thuc-vat' %}">Họ thực vật<a>:<span class="w3-text-red"> {{ So_ho_thuc_vat }}</span></li>
       <li><a class="link" href="{% url 'duoclieu' %}">Dược liệu</a>:<span class="w3-text-red"> {{ So_duoc_lieu }}</span></li>
     </ul>
+</div>
 {% endblock %}
