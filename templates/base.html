@@ -26,6 +26,7 @@
     .cap3{text-align: center; border-radius: 5px; padding-right: 5px; padding-left: 5px; padding-top: 1px; padding-bottom: 1px;}
     .padding_left{padding-left: 10px;}
     .margin_left{margin-left: 10px;}
+    .margin_0{margin-left: 0px;}
     li{scroll-margin-top: 3em;}
     .margin-30px{margin-bottom: -30px;}
     .font_2em{ font-size: 2em; }
@@ -134,7 +135,7 @@
       <!--a class="w3-bar-item fa fa-home w3-large w3-hover-yellow w3-right" href="{% url 'home' %}"></a-->
       <a class="w3-bar-item w3-text-aqua w3-hide-medium w3-hide-small w3-left"  style="font-family:'Copperplate'" href="{% url 'home' %}">Website kiến thức dược học số 1 Việt Nam</a>
     </div>
-    <div class="margin_left" id="close-tab">
+    <div id="close-tab">
       {% block content %}<p>1234567890</p>{% endblock %}
     </div>
   </div>
