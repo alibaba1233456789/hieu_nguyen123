@@ -11,15 +11,13 @@
   th, td { text-align: left; padding: 5px; }
   tr:nth-child(even) { background-color: #f2f2f2; }
 
-  .m_0px{margin-bottom: 2px; margin-top: 2px;}
-
 {% endblock %}
 
 {% block sidebar2 %}
 <hr class="m_0px">
   {% for lv1 in level0.level1_set.all %}
     {% if lv1.tieu_de_1 is not None %}
-      <a class="w3-bar-item" href="#a{{ forloop.counter }}"><small><red>{% if forloop.counter == 1 %}I{% endif%}{% if forloop.counter == 2 %}II{% endif%}{% if forloop.counter == 3 %}III{% endif%}{% if forloop.counter == 4 %}IV{% endif%}{% if forloop.counter == 5 %}V{% endif%}{% if forloop.counter == 6 %}VI{% endif%}{% if forloop.counter == 7 %}VII{% endif%}{% if forloop.counter == 8 %}VIII{% endif%}{% if forloop.counter == 9 %}IX{% endif%}{% if forloop.counter == 10 %}X{% endif%}{% if forloop.counter == 11 %}XI{% endif%}{% if forloop.counter == 12 %}XII{% endif%}{% if forloop.counter == 13 %}XIII{% endif%}{% if forloop.counter == 14 %}XIV{% endif%}{% if forloop.counter == 15 %}XV{% endif%}</red>. {{lv1.tieu_de_1|upper}}</small></a>
+      <a class="w3-bar-item dam" href="#a{{ forloop.counter }}"><small><red>{% if forloop.counter == 1 %}I{% endif%}{% if forloop.counter == 2 %}II{% endif%}{% if forloop.counter == 3 %}III{% endif%}{% if forloop.counter == 4 %}IV{% endif%}{% if forloop.counter == 5 %}V{% endif%}{% if forloop.counter == 6 %}VI{% endif%}{% if forloop.counter == 7 %}VII{% endif%}{% if forloop.counter == 8 %}VIII{% endif%}{% if forloop.counter == 9 %}IX{% endif%}{% if forloop.counter == 10 %}X{% endif%}{% if forloop.counter == 11 %}XI{% endif%}{% if forloop.counter == 12 %}XII{% endif%}{% if forloop.counter == 13 %}XIII{% endif%}{% if forloop.counter == 14 %}XIV{% endif%}{% if forloop.counter == 15 %}XV{% endif%}</red>. {{lv1.tieu_de_1|upper}}</small></a>
 
       {% for lv2 in lv1.level2_set.all %}
         {% if lv2.tieu_de_2 is not None %}
